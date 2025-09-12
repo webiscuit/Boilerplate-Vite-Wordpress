@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧
+  Import
+  ୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧*/
+@import "tailwindcss";
+@import "./components/_header.css";
+@import "./components/_footer.css";
+
+/*୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧
+  Foundation
+  ୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧*/
+@theme {
+  --font-sans: "Noto Sans JP", "ヒラギノ角ゴシック", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
+}

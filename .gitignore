@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+__*
+src/components
+src/index.html
+.vscode
+*.lnk
+
+# local
+wp-admin
+wp-includes
+wp-*.php
+local/app/public/*.*
+local/conf
+**/wp-content/languages
+**/wp-content/upgrade
+**/wp-content/themes/twenty*
+**/wp-content/index.php
+**/wp-content/themes/index.php
+!**/wp-content/themes/index
+!**/wp-content/themes/index/**

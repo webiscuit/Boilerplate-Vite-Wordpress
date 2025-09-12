@@ -1,0 +1,42 @@
+{
+  "name": "boilerplate-vite-wordpress",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "pug:watch": "pug -w src/views/ --out src/",
+    "vite": "vite",
+    "dev": "npm-run-all -p pug:watch vite",
+    "pug:build": "pug src/views/ --out dist/ --pretty",
+    "vite:build": "vite build",
+    "build": "npm-run-all -p pug:build vite:build",
+    "wp:css": "postcss src/css/style.css -o local/app/public/wp-content/themes/index/assets/css/style.css --map --watch",
+    "wp:js": "esbuild src/main.js --bundle --outfile=local/app/public/wp-content/themes/index/assets/js/main.js --watch --sourcemap",
+    "wp:img": "imagemin src/img/* --plugin=mozjpeg --plugin=pngquant --plugin=svgo --plugin=gifsicle --out-dir=local/app/public/wp-content/themes/index/assets/img --watch",
+    "wp": "npm-run-all -p wp:css wp:js wp:img",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.9",
+    "gsap": "^3.13.0",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-nested": "^7.0.2",
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^6.0.1",
+    "swiper": "^11.2.10",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.4",
+    "vite-plugin-pug": "^0.4.1"
+  }
+}
